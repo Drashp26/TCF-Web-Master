@@ -13,7 +13,7 @@ html {
   scroll-padding-top: 86px;
 }
 body {
-  font-family: poppins, system-ui, sans-serif;
+  font-family: "Montserrat", Georgia, serif;
   color: var(--ink);
   background: #fff;
 }
@@ -30,7 +30,7 @@ body {
 .brand-mark {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--blue);
   color: #fff;
   display: grid;
@@ -64,7 +64,7 @@ body {
   box-shadow: 0 14px 32px rgba(37, 99, 235, 0.2);
 }
 .section-pad {
-  padding: 9rem 0;
+  padding: 7rem 0;
 }
 .hero-section {
   min-height: 100vh;
@@ -100,7 +100,7 @@ body {
   background: #fff;
   border: 1px solid var(--border);
   box-shadow: 0 8px 28px rgba(15, 23, 42, 0.05);
-  font-weight: 00;
+  font-weight: 800;
   font-size: 0.74rem;
   color: #475569;
   text-transform: uppercase;
@@ -114,15 +114,14 @@ body {
 }
 .display-title,
 .section-title {
-  font-family: "poppins", Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.0em;
+  font-family: "montserrat", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--ink);
-  line-height: 1.05;
 }
 .display-title {
-  font-size: 90px;
-  line-height: 1.05;
+  font-size: clamp(3.25rem, 7vw, 6.9rem);
+  line-height: 0.98;
   margin-top: 1.5rem;
 }
 .display-title span {
@@ -133,7 +132,7 @@ body {
   line-height: 1.08;
 }
 .section-copy {
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   color: var(--muted);
   line-height: 1.75;
 }
@@ -145,17 +144,16 @@ body {
   flex-wrap: wrap;
   gap: 0.7rem;
 }
-.btn-primary a {
-  color: #fff;
+.topic-row a {
+  color: #334155;
   text-decoration: none;
-  background: #1d4ed8;
+  background: #fff;
   border: 1px solid var(--border);
-  border-radius: 90px;
+  border-radius: 999px;
   padding: 0.7rem 1rem;
   font-weight: 700;
-  
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
 }
-
 .topic-row a:hover {
   border-color: var(--blue);
   color: var(--blue);
@@ -172,7 +170,50 @@ body {
   object-fit: cover;
   border-radius: 2rem;
 }
-
+.floating-card {
+  position: absolute;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.14);
+  border-radius: 1.25rem;
+  padding: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.score-card {
+  left: -1rem;
+  bottom: -1.3rem;
+}
+.score-card i {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 0.9rem;
+  padding: 0.7rem;
+}
+.floating-card small,
+.floating-card em {
+  display: block;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.floating-card strong {
+  display: block;
+}
+.score-card em {
+  color: #059669;
+  font-style: normal;
+}
+.live-card {
+  right: -0.8rem;
+  top: -1rem;
+}
+.live-card > span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--red);
+}
 .bg-soft {
   background: var(--soft);
 }
@@ -323,6 +364,136 @@ body {
   color: #fff;
   font-weight: 800;
 }
+
+
+.why-card {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.why-card-image {
+  display: block;
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 1.5rem;
+  object-fit: cover;
+  border: 5px solid #eff6ff;
+  border-radius: 50%;
+}
+.why-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.why-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.test-format-card {
+  height: 100%;
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.test-format-card:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: var(--shadow);
+}
+.test-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+.test-number {
+  color: var(--blue);
+  font-family: "Montserrat", monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.test-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.7rem;
+  background: #eff6ff;
+  border-radius: 999px;
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.test-format-card h3 {
+  font-family: "Poppins", Georgia, serif;
+  color: var(--ink);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+.test-type {
+  color: var(--red) !important;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+}
+.test-format-card > p:not(.test-type) {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.test-format-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 1.4rem 0 0;
+  margin: 1.4rem 0 0;
+  border-top: 1px solid var(--border);
+}
+.test-format-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: #334155;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.test-format-list li::before {
+  content: "✓";
+  display: inline-grid;
+  flex: 0 0 auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
 .nav-pills .nav-link {
   background: #fff;
   border: 1px solid var(--border);
@@ -342,7 +513,7 @@ body {
   box-shadow: var(--shadow);
 }
 .exam-panel h3 {
-  font-family: "poppins";
+  font-family:"montserrat", Georgia, serif;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -384,7 +555,7 @@ body {
 }
 .stat-tile strong {
   display: block;
-  font-family: "poppins";
+  font-family: "Playfair Display";
   font-size: 3rem;
   color: var(--blue);
 }
@@ -435,12 +606,12 @@ body {
 }
 .stats-band strong {
   display: block;
-  font-family: "poppins";
+  font-family: "Playfair Display";
   font-size: 2.7rem;
 }
 .stats-band span {
   color: #bfdbfe;
-  font-weight: 400;
+  font-weight: 700;
 }
 .price-card {
   height: 100%;
@@ -452,7 +623,7 @@ body {
   font-weight: 800;
 }
 .price-card h3 {
-  font-family: "poppins";
+  font-family: "Playfair Display";
   font-size: 3rem;
   font-weight: 800;
 }
